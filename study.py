@@ -23,7 +23,7 @@ def study(username, password, ua):
             if "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD5uIDebA2qU746e/NVPiQSBA0Q" not in touch.text:
                 print("记录的公钥没有出现")
             capText = cap_recognize(bjySession.get(url=capUrl).content)
-            # print(f'验证码识别: {capText}')
+            print(f'验证码识别: {capText}')
             login_r = bjySession.post('https://m.bjyouth.net/site/login',
                                       data={
                                           '_csrf_mobile': bjySession.cookies.get_dict()['_csrf_mobile'],
